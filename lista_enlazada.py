@@ -1,3 +1,4 @@
+from tempfile import tempdir
 from nodo import Nodo
 
 class ListaEnlazada:
@@ -19,5 +20,23 @@ class ListaEnlazada:
             print("ESTO REALMENTE VINO POR ACA",temp.producto, temp.id)
             temp = temp.next
         return 'holaninjas'
+
+
+    def buscarNodo(self, id):        
+        temp = self.head
+        while temp != None:
+            if temp.getId() == id:
+                return temp
+            temp = temp.next
+            print("BuscarNodo", temp)
+        return None
+    
+    def longitudListaEnlazada(self):
+        temp = self.head
+        contador = 0
+        while temp != None:
+            contador += 1
+            temp = temp.next
+        return contador
 
 

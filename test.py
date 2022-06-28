@@ -12,4 +12,8 @@ producto4 = Nodo("consola", 131)
 listaEnlazada.agregarNodo(producto1)
 listaEnlazada.agregarNodo(producto3)
 listaEnlazada.agregarNodo(producto4)
+
 print(listaEnlazada.desplegarInformacion())
+
+listaEnlazada.buscarNodo(1)
+print(listaEnlazada.longitudListaEnlazada())
